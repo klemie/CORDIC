@@ -1,5 +1,9 @@
 {
     "rust-analyzer.linkedProjects": [
         ".\\CORDIC\\Cargo.toml"
+    ],
+    "rust-analyzer.showUnlinkedFileNotification": false,
+    "cSpell.words": [
+        "Cordic"
     ]
 }

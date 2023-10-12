@@ -1,3 +1,11 @@
+mod utils;
+mod circular;
+pub mod circularCordic;
+mod hyperbolic;
+pub mod hyperbolicCordic;
+mod linear;
+pub mod linearCordic;
+
 pub fn add(left: usize, right: usize) -> usize {
     left + right
 }

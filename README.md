@@ -1,6 +1,8 @@
 # CORDIC
 This crate has a duel purpose help me fully understand CORDIC for ECE 496B and borden my understanding of Rust.
 
+$\usepackage{amsmath}$
+
 ## Arithmetic Overview 
 
 CORDIC generates many elemental functions necessary in computer arithmetic. There are three CORDICs: Linear, Circular, and Hyperbolic, all of which generate a different set of elementary functions. Each of the cordic follow the same process for generation but have different conditions. 
@@ -16,10 +18,23 @@ CORDIC is made up of 5 parameters:
 - $\theta(i)$
 - $\mu(i)$
 
-Each parameter is synthesis slightly different for each type of cordic. 
+In general Cordic equations are synthesized to the following three equations:
+$$x_{i+1}=x_i-m\mu_i\delta_ix_i$$
+$$y_{i+1}=y_i+m\mu_i\delta_iy_i$$
+$$z_{i+1}=z_i-\mu_i\theta_i$$
 
-![CORDIC (x,y) generator chart](image.png)
+$$
+m=
+    \begin{cases}
+        1 & \text{ when circular mode} \\
+        0 & \text{ when linear mode} \\
+        1 & \text{ when hyperbolic mode} \\
+    \end{cases}
+$$
 
+these equations are used to generate the following elementary functions.
+
+![Alt text](image-2.png)
 
 ### Linear CORDIC
 `Elementary functions:` [$\frac{a}{b}$ $a\times b$]

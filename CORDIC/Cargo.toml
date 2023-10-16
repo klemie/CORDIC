@@ -1,5 +1,5 @@
 [package]
-name = "CORDIC-LIB"
+name = "CORDIC"
 version = "0.1.0"
 edition = "2021"
 
